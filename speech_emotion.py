@@ -6,7 +6,7 @@ import os
 import tempfile
 
 class SpeechEmotionDetector:
-    def __init__(self, model_path="models/speech_model.h5"):
+    def __init__(self, model_path="speech_model.h5"):
         self.model = tf.keras.models.load_model(model_path)
         self.emotions = ["anger", "disgust", "fear", "happiness", "neutral", "sadness", "surprise"]
         
