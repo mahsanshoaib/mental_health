@@ -6,7 +6,7 @@ from PIL import Image
 import io
 
 class FaceEmotionDetector:
-    def __init__(self, model_path="models/face_model.h5"):
+    def __init__(self, model_path="face_model.h5"):
         self.model = tf.keras.models.load_model(model_path)
         self.emotions = ["anger", "disgust", "fear", "happiness", "neutral", "sadness", "surprise"]
         self.face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
